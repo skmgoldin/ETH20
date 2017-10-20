@@ -1,0 +1,28 @@
+{
+  "name": "ETH20",
+  "version": "0.0.1",
+  "description": "Convert Ether to an Ether-backed ERC-20",
+  "scripts": {
+    "compile": "truffle compile",
+    "deploy-rinkeby": "truffle migrate --network rinkeby",
+    "test": "npm run lint && truffle test",
+    "fix": "eslint --fix",
+    "lint": "eslint ./*",
+    "install": "truffle install eip621-tokens"
+  },
+  "author": "Mike Goldin <mike.goldin@consensys.net>",
+  "license": "ISC",
+  "dependencies": {
+    "bignumber.js": "4.0.4",
+    "bip39": "2.4.0",
+    "ethjs-provider-http": "0.1.6",
+    "ethjs-rpc": "0.1.7",
+    "truffle": "beta",
+    "truffle-hdwallet-provider": "0.0.3"
+  },
+  "devDependencies": {
+    "eslint": "4.4.1",
+    "eslint-config-airbnb-base": "11.3.1",
+    "eslint-plugin-import": "2.7.0"
+  }
+}
