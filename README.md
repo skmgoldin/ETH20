@@ -1,5 +1,7 @@
 # ETH20
 
+[ ![Codeship Status for skmgoldin/ETH20](https://app.codeship.com/projects/ea15e410-982b-0135-9cd3-4ae5c5c5aaac/status?branch=master)](https://app.codeship.com/projects/251984)
+
 Convert Ether into an Ether-backed ERC20 token.
 
 ## How it works
