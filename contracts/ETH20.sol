@@ -4,7 +4,7 @@ import "./tokens/EIP621OraclizedToken.sol";
 
 contract ETH20 {
 
-  EIP621OraclizedToken token;
+  EIP621OraclizedToken public token;
 
   function ETH20(
     uint256 _initialAmount,
@@ -21,14 +21,18 @@ contract ETH20 {
     );
   }
 
-  function etherToToken() {
+  function etherToToken() public payable {
     token.increaseSupply(msg.value, msg.sender);
   }
 
-  function tokenToEther(uint _amount) {
+  function tokenToEther(uint _amount) public {
     require(token.balanceOf(msg.sender) >= _amount);
     token.decreaseSupply(_amount, msg.sender);
 
     msg.sender.transfer(_amount);
+  }
+
+  function tokenAddress() public view returns (address) {
+    return address(token);
   }
 }
